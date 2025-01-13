@@ -44,6 +44,7 @@ public class TrackEditor : MonoBehaviour
 
     private void Update()
     {
+
         if (Input.GetMouseButtonDown(0)) //좌클릭을 눌렀을 때
         {
             SelectCheck(); //무엇을 클릭했는지 체크함
@@ -113,8 +114,6 @@ public class TrackEditor : MonoBehaviour
             isRangeDrag = false;
         }
     }
-
-
     private void ChangeNotePosition()
     {
         if (Input.GetMouseButton(0)) //좌클릭을 누르고 있는 상태라면
@@ -122,7 +121,6 @@ public class TrackEditor : MonoBehaviour
             //마우스 위치에 따라 노트를 옮김
             Vector2 mousePos = Camera.main.ScreenToViewportPoint(Input.mousePosition);
             mousePos = new Vector2(mousePos.x * 1920, mousePos.y * 1080 - 540);
-
 
             int xPos = (int)(-contentRect.anchoredPosition.x + mousePos.x + offset.x / 2);
 
@@ -152,6 +150,7 @@ public class TrackEditor : MonoBehaviour
         {
             isNoteDrag = true; //노트를 드래그 할 수 있도록 함
             noteXPos = -(-currentSelectedNote.offsetMin.x + currentSelectedNote.offsetMax.x);
+
             return;
         }
 
