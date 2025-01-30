@@ -1,7 +1,6 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
-using UnityEditor;
 using UnityEngine;
 
 using System.Windows.Forms;
@@ -11,6 +10,8 @@ public class MapEditor : MonoBehaviour
 {
     public MapInfo mapInfo; //수정할 맵 설정
 
+    public TrackEditor trackEditor;
+
     public List<MapInfo> workHistory;
 
     public Transform timeLineParent;
@@ -19,15 +20,56 @@ public class MapEditor : MonoBehaviour
     public TMP_InputField bpmInput;
     private float lastestBPM;
 
+    private AudioClip lastestBGM;
+
+    private List<GameObject> currentTimelines = new();
+
     private void Update()
     {
         ShortcutKey();
 
-        if(float.Parse(bpmInput.text) != lastestBPM)
+        if(float.Parse(bpmInput.text) != lastestBPM || lastestBGM != mapInfo.backgroundMusic)
         {
             mapInfo.bpm = float.Parse(bpmInput.text);
+            lastestBPM = float.Parse(bpmInput.text);
+            lastestBGM = mapInfo.backgroundMusic;
 
             SetTimeLine();
+        }
+    }
+
+    public void SaveInfo()
+    {
+        mapInfo.Initialization();
+
+        for (int i = 0; i < trackEditor.tracks.Count; i++)
+        {
+            for (int j = 0; j < trackEditor.tracks[i].childCount; j++)
+            {
+                NoteInfo note = trackEditor.tracks[i].GetChild(j).GetComponent<NoteInfo>();
+                RectTransform noteRect = note.transform as RectTransform;
+
+                mapInfo.trackNote[i].notes.Add(new MapNote(InputManager.instance.KeyCodeToEnum(note.noteKey), noteRect.offsetMin.x, noteRect.offsetMax.x, note.isNotMove));
+            }
+        }
+    }
+
+    private void LoadInfo()
+    {
+        trackEditor.Initialization();
+
+        for (int i = 0; i < mapInfo.trackNote.Count; i++)
+        {
+            for (int j = 0; j < mapInfo.trackNote[i].notes.Count; j++)
+            {
+                GameObject newNote = Instantiate(trackEditor.notePrefab, trackEditor.tracks[i]);
+                newNote.name = "Note";
+                newNote.GetComponent<NoteInfo>().noteKey = InputManager.instance.EnumToKeyCode(mapInfo.trackNote[i].notes[j].requireKey);
+                newNote.GetComponent<NoteInfo>().isNotMove = mapInfo.trackNote[i].notes[j].isNotMove;
+                RectTransform noteRect = newNote.GetComponent<RectTransform>();
+                noteRect.offsetMin = new(mapInfo.trackNote[i].notes[j].startTime, noteRect.offsetMin.y);
+                noteRect.offsetMax = new(mapInfo.trackNote[i].notes[j].endTime, noteRect.offsetMax.y);
+            }
         }
     }
 
@@ -53,6 +95,8 @@ public class MapEditor : MonoBehaviour
 
     public void OnClickSaveLevel()
     {
+        SaveInfo();
+
         SaveFileDialog saveFileDialog = new SaveFileDialog();
         saveFileDialog.DefaultExt = "json"; // JSON 파일만 필터링
         saveFileDialog.Title = "Select a JSON File"; // 탐색기 타이틀
@@ -82,6 +126,8 @@ public class MapEditor : MonoBehaviour
                 string json = File.ReadAllText(filePath);
 
                 JsonUtility.FromJsonOverwrite(json, mapInfo);
+
+                LoadInfo();
             }
             catch (Exception e)
             {
@@ -120,16 +166,25 @@ public class MapEditor : MonoBehaviour
             return;
         }
 
-        int timeLineLength = Mathf.FloorToInt(mapInfo.backgroundMusic.length * mapInfo.bpm / 60 / 4);
+        SoundManager.instance.bgmSource.clip = lastestBGM;
+
+        for(int i=currentTimelines.Count - 1; i>=0; i--)
+        {
+            Destroy(currentTimelines[i]);
+        }
+
+        int timeLineLength = Mathf.FloorToInt(mapInfo.backgroundMusic.length * mapInfo.bpm / 60 / 2);
 
         for(int i=0; i<timeLineLength; i++)
         {
-            if (timeLineParent.childCount > timeLineLength) return; //현재 있는 마디수가 요구 마디수보다 많으면
+            if (timeLineParent.childCount > timeLineLength) return;
 
             if (timeLineParent.childCount > i) continue;
 
             GameObject newTimeLine = Instantiate(timeLinePrefab, timeLineParent);
             newTimeLine.transform.Find("Index").GetComponent<TMP_Text>().text = $"{i}";
+
+            currentTimelines.Add(newTimeLine);
         }
     }
 }

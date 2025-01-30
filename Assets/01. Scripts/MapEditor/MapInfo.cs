@@ -7,21 +7,41 @@ using UnityEngine;
 public class MapInfo : ScriptableObject
 {
     public float bpm;
+    public float offset;
 
-    public List<MapNote> track1Note = new();
-    public List<MapNote> track2Note = new();
-    public List<MapNote> track3Note = new();
-    public List<MapNote> track4Note = new();
-    public List<MapNote> track5Note = new();
+    public List<TrackNote> trackNote = new();
 
     public AudioClip backgroundMusic;
     
+    public void Initialization()
+    {
+        for(int i=0; i<trackNote.Count; i++)
+        {
+            trackNote[i].notes.Clear();
+        }
+    }
 }
 
-[System.Serializable]
+[Serializable]
 public class MapNote
 {
-    public KeyCode  requireKey;         //요구 입력키
+    public KeyList  requireKey;         //요구 입력키
     public float    startTime;          //시작 마디
     public float    endTime;            //끝 마디
+    public bool     isNotMove = false;  //키 입력은 받지만, 실제로 움직이진 않음
+
+
+    public MapNote(KeyList requireKey, float startTime, float endTime, bool isNotMove)
+    {
+        this.requireKey = requireKey;
+        this.startTime = startTime;
+        this.endTime = endTime;
+        this.isNotMove = isNotMove;
+    }
+}
+
+[Serializable]
+public class TrackNote
+{
+    public List<MapNote> notes = new();
 }

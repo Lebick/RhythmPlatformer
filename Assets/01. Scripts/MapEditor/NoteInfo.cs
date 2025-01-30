@@ -1,13 +1,14 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class NoteInfo : MonoBehaviour
 {
     private KeyCode lastestKey = KeyCode.None;
 
     public KeyCode noteKey;
-    public float inputTime;
-    public NoteType type;
+    //public float inputTime;
+    public bool isNotMove;
 
     public TMP_Text keyText;
 
@@ -20,6 +21,12 @@ public class NoteInfo : MonoBehaviour
             lastestKey = noteKey;
             UpdateText();
         }
+
+        if (isNotMove)
+            GetComponent<Image>().color = Color.red;
+        else
+            GetComponent<Image>().color = Color.white;
+
     }
     
     private void UpdateText()

@@ -50,7 +50,7 @@ public class TrackEditor : MonoBehaviour
             SelectCheck(); //무엇을 클릭했는지 체크함
         }
 
-        if (Input.GetKeyDown(KeyCode.Delete) && currentSelectedNote != null)
+        if (Input.GetKeyDown(KeyCode.Delete) && currentSelectedNote != null) //선택된 노트가 존재하고, Delete키를 눌렀을 시 해당 노드 제거
         {
             DeleteNote();
         }
@@ -60,10 +60,10 @@ public class TrackEditor : MonoBehaviour
         if (isRangeDrag) //노트 길이를 수정중일 때
             ChangeNoteRange(); //노트 길이 수정
 
-        if (isNoteDrag)
+        if (isNoteDrag) //노트를 드래그하려고 할 때
             ChangeNotePosition(); //노트 위치 수정
 
-        if (currentSelectedNote != null)
+        if (currentSelectedNote != null) //노트가 활성화 되어있을 때 해당 노트에 키 입력
             ChangeNoteKey();
 
         if (isCheckCreate && Input.GetMouseButtonUp(0)) //노트 생성이 가능하고, 마우스를 뗐다면
@@ -88,7 +88,10 @@ public class TrackEditor : MonoBehaviour
         foreach(KeyCode key in InputManager.instance.keys)
         {
             if (Input.GetKeyDown(key))
+            {
                 currentSelectedNote.GetComponent<NoteInfo>().noteKey = key;
+                currentSelectedNote.GetComponent<NoteInfo>().isNotMove = Input.GetKey(KeyCode.LeftAlt);
+            }
         }
     }
 
@@ -114,6 +117,7 @@ public class TrackEditor : MonoBehaviour
             isRangeDrag = false;
         }
     }
+
     private void ChangeNotePosition()
     {
         if (Input.GetMouseButton(0)) //좌클릭을 누르고 있는 상태라면
@@ -140,6 +144,9 @@ public class TrackEditor : MonoBehaviour
 
     private void SelectCheck()
     {
+        if (IsPointerOverTrack("TimeLineBG")) //타임라인을 클릭했을 때
+            return; //아래 코드 미실행
+
         if (IsPointerOverTrack("DragAbleRange")) //길이 드래그 가능 영역을 클릭했을 때
         {
             isRangeDrag = true; //길이를 드래그 할 수 있도록 함
@@ -214,7 +221,6 @@ public class TrackEditor : MonoBehaviour
         noteRect.offsetMax = new(xPos - 50, noteRect.offsetMax.y);
     }
 
-
     private int GetMagneticPos(int value)
     {
         string newPos = value.ToString("D3");
@@ -253,5 +259,16 @@ public class TrackEditor : MonoBehaviour
     public void OnClickMagneticBtn(int value)
     {
         magneticValue = 200 / value;
+    }
+
+    public void Initialization()
+    {
+        for(int i=0; i<tracks.Count; i++)
+        {
+            for(int j=tracks[i].childCount-1; j>=0; j--)
+            {
+                Destroy(tracks[i].GetChild(j).gameObject);
+            }
+        }
     }
 }
