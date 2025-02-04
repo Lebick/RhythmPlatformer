@@ -89,8 +89,8 @@ public class TrackEditor : MonoBehaviour
         {
             if (Input.GetKeyDown(key))
             {
-                currentSelectedNote.GetComponent<NoteInfo>().noteKey = key;
-                currentSelectedNote.GetComponent<NoteInfo>().isNotMove = Input.GetKey(KeyCode.LeftAlt);
+                currentSelectedNote.GetComponent<EditorNoteInfo>().noteKey = key;
+                currentSelectedNote.GetComponent<EditorNoteInfo>().isNotMove = Input.GetKey(KeyCode.LeftAlt);
             }
         }
     }

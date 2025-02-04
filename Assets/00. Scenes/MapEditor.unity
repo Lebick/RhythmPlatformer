@@ -24203,7 +24203,7 @@ PrefabInstance:
     - target: {fileID: 4023431688786196431, guid: 5188820e9604b6d4f9d605d1fae9823e, type: 3}
       propertyPath: mapInfo
       value: 
-      objectReference: {fileID: 11400000, guid: ac172a9b8454f834f863e42a1f157b54, type: 2}
+      objectReference: {fileID: 11400000, guid: 348104a5ab4f5f746966f1b656b20b40, type: 2}
     - target: {fileID: 8551518143804741319, guid: 5188820e9604b6d4f9d605d1fae9823e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

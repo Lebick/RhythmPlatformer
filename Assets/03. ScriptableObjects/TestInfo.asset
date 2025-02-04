@@ -18,17 +18,21 @@ MonoBehaviour:
   - notes:
     - requireKey: 3
       startTime: 50
-      endTime: 350
+      endTime: 0
       isNotMove: 0
-  - notes:
     - requireKey: 2
-      startTime: 450
-      endTime: 750
+      startTime: 350
+      endTime: 300
+      isNotMove: 1
+  - notes:
+    - requireKey: 6
+      startTime: 350
+      endTime: 450
       isNotMove: 0
   - notes:
     - requireKey: 4
-      startTime: 250
-      endTime: 350
+      startTime: 300
+      endTime: 400
       isNotMove: 0
   - notes: []
   - notes: []

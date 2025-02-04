@@ -1290,7 +1290,7 @@
     "m_ObjectId": "0a107478b1c04831a62f0fe77e2ac5b3",
     "m_Title": "Combine Rim Colored Sprite with Sample Sprite's Alpha",
     "m_Position": {
-        "x": 1303.0,
+        "x": 1302.9998779296875,
         "y": 97.0
     }
 }
@@ -1780,8 +1780,8 @@
     "m_ObjectId": "1ae88c2da4dd4e11be49f486e3986c73",
     "m_Title": "Sample Sprite Texure (From Sprite Renderer)",
     "m_Position": {
-        "x": -373.0000915527344,
-        "y": 168.0001220703125
+        "x": -372.9998779296875,
+        "y": 167.99998474121095
     }
 }
 
@@ -2022,8 +2022,8 @@
     "m_ObjectId": "28bd925bc91047ea8ef48d720da63a14",
     "m_Title": "Calculate World UV Scroll Direction (Based on Wind Direction)",
     "m_Position": {
-        "x": -1430.0,
-        "y": -1040.9998779296875
+        "x": -1429.9998779296875,
+        "y": -1041.0
     }
 }
 
@@ -2166,7 +2166,7 @@
     "m_Title": "Combine Noise with Offset Influence Mask",
     "m_Position": {
         "x": 1140.9998779296875,
-        "y": -968.9998779296875
+        "y": -968.9999389648438
     }
 }
 
@@ -2715,8 +2715,8 @@
     "m_ObjectId": "4c4e93cc559045eaa8e5d08530ea289a",
     "m_Title": "Combine Sampled Mask Texture's G Channel with Rim Color",
     "m_Position": {
-        "x": 6.0,
-        "y": 782.0001220703125
+        "x": 6.000139236450195,
+        "y": 781.9999389648438
     }
 }
 
@@ -3389,8 +3389,8 @@
     "m_ObjectId": "6790f797756a4e20b94927d7ea339a7a",
     "m_Title": "Combine Mask Texture's G Channel with Rim Color",
     "m_Position": {
-        "x": 594.0,
-        "y": 116.99999237060547
+        "x": 593.9998168945313,
+        "y": 117.00001525878906
     }
 }
 
@@ -3436,8 +3436,8 @@
     "m_ObjectId": "6be27fdea2584abeb87ab83e6dfe9897",
     "m_Title": "Sample Mask Texture",
     "m_Position": {
-        "x": -698.0,
-        "y": 1117.0001220703125
+        "x": -697.9998779296875,
+        "y": 1117.0
     }
 }
 
@@ -3553,8 +3553,8 @@
     "m_ObjectId": "75d41b56b3ef418888f3f86d26a867b8",
     "m_Title": "Wind Speed",
     "m_Position": {
-        "x": -1874.9998779296875,
-        "y": -934.9998779296875
+        "x": -1874.999755859375,
+        "y": -934.9999389648438
     }
 }
 
@@ -4023,8 +4023,8 @@
     "m_ObjectId": "8f9d0c60cfba4e8b86350d862ec31de5",
     "m_Title": "Apply Noise Offset to Sprite Vertices",
     "m_Position": {
-        "x": 1417.999755859375,
-        "y": -492.99993896484377
+        "x": 1417.9998779296875,
+        "y": -493.0
     }
 }
 
@@ -4451,8 +4451,8 @@
     "m_ObjectId": "9f4177f67e3a4d839e2dce1215cd0b24",
     "m_Title": "Sample Normal Texture",
     "m_Position": {
-        "x": 1875.999755859375,
-        "y": 1197.000244140625
+        "x": 1875.9998779296875,
+        "y": 1197.0001220703125
     }
 }
 
@@ -4792,8 +4792,8 @@
     "m_ObjectId": "b3966fe7c8ee4dac93bcf6cc28f51767",
     "m_Title": "Apply Auto Scroll to Noise",
     "m_Position": {
-        "x": -508.0,
-        "y": -858.9998779296875
+        "x": -507.9998474121094,
+        "y": -858.9999389648438
     }
 }
 
@@ -5801,8 +5801,8 @@
     "m_ObjectId": "de1b9385a6fb4925a0cf34512e403bce",
     "m_Title": "Visual Adjustments to Noise",
     "m_Position": {
-        "x": 66.0,
-        "y": -862.9998779296875
+        "x": 66.00025939941406,
+        "y": -862.9999389648438
     }
 }
 
@@ -6639,8 +6639,8 @@
     "m_ObjectId": "fa37be45173341cfb7207d167bc72e7f",
     "m_Title": "Calculate Vertex Offset Influence Mask (Based on Sprite's Height)",
     "m_Position": {
-        "x": -112.00006103515625,
-        "y": -1393.9998779296875
+        "x": -111.9998779296875,
+        "y": -1393.999755859375
     }
 }
 
@@ -6651,7 +6651,7 @@
     "m_Title": "Output Sample Mask Texture's R Channel to Mask",
     "m_Position": {
         "x": 1190.9998779296875,
-        "y": 1248.9998779296875
+        "y": 1249.0
     }
 }
 

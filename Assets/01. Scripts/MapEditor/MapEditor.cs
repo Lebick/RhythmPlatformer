@@ -46,7 +46,7 @@ public class MapEditor : MonoBehaviour
         {
             for (int j = 0; j < trackEditor.tracks[i].childCount; j++)
             {
-                NoteInfo note = trackEditor.tracks[i].GetChild(j).GetComponent<NoteInfo>();
+                EditorNoteInfo note = trackEditor.tracks[i].GetChild(j).GetComponent<EditorNoteInfo>();
                 RectTransform noteRect = note.transform as RectTransform;
 
                 mapInfo.trackNote[i].notes.Add(new MapNote(InputManager.instance.KeyCodeToEnum(note.noteKey), noteRect.offsetMin.x, noteRect.offsetMax.x, note.isNotMove));
@@ -64,8 +64,8 @@ public class MapEditor : MonoBehaviour
             {
                 GameObject newNote = Instantiate(trackEditor.notePrefab, trackEditor.tracks[i]);
                 newNote.name = "Note";
-                newNote.GetComponent<NoteInfo>().noteKey = InputManager.instance.EnumToKeyCode(mapInfo.trackNote[i].notes[j].requireKey);
-                newNote.GetComponent<NoteInfo>().isNotMove = mapInfo.trackNote[i].notes[j].isNotMove;
+                newNote.GetComponent<EditorNoteInfo>().noteKey = InputManager.instance.EnumToKeyCode(mapInfo.trackNote[i].notes[j].requireKey);
+                newNote.GetComponent<EditorNoteInfo>().isNotMove = mapInfo.trackNote[i].notes[j].isNotMove;
                 RectTransform noteRect = newNote.GetComponent<RectTransform>();
                 noteRect.offsetMin = new(mapInfo.trackNote[i].notes[j].startTime, noteRect.offsetMin.y);
                 noteRect.offsetMax = new(mapInfo.trackNote[i].notes[j].endTime, noteRect.offsetMax.y);

@@ -1,34 +1,26 @@
+using Coffee.UISoftMask;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class NoteInfo : MonoBehaviour
 {
-    private KeyCode lastestKey = KeyCode.None;
+    public float inputTime;
+    public float endInputTime;
 
     public KeyCode noteKey;
-    //public float inputTime;
-    public bool isNotMove;
 
     public TMP_Text keyText;
 
-    private void Update()
+    public void Setting(MapNote note)
     {
-        //inputTime = 
-
-        if(lastestKey != noteKey)
-        {
-            lastestKey = noteKey;
-            UpdateText();
-        }
-
-        if (isNotMove)
-            GetComponent<Image>().color = Color.red;
-        else
-            GetComponent<Image>().color = Color.white;
-
+        GetComponent<Image>().color = Color.white;
+        inputTime = note.startTime;
+        endInputTime = note.endTime;
+        noteKey = InputManager.instance.EnumToKeyCode(note.requireKey);
+        UpdateText();
     }
-    
+
     private void UpdateText()
     {
         string text = string.Empty;
@@ -42,9 +34,9 @@ public class NoteInfo : MonoBehaviour
         else if (noteKey == InputManager.instance.downKey)
             text = "¡å";
         else if (noteKey == InputManager.instance.dashKey)
-            text = "Dash";
+            text = InputManager.instance.dashKey.ToString();
         else if (noteKey == InputManager.instance.jumpKey)
-            text = "Jump";
+            text = InputManager.instance.jumpKey.ToString();
 
         keyText.text = text;
     }

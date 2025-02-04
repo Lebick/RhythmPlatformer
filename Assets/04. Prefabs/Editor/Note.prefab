@@ -312,7 +312,7 @@ GameObject:
   - component: {fileID: 3750849128699357793}
   - component: {fileID: 8754199886295059206}
   - component: {fileID: 7655761972152083383}
-  - component: {fileID: 4241706534496066018}
+  - component: {fileID: 1774944356415351493}
   m_Layer: 5
   m_Name: Note
   m_TagString: Untagged
@@ -379,7 +379,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &4241706534496066018
+--- !u!114 &1774944356415351493
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -388,9 +388,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 6028383946173411435}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c1a6c65ba18d29b4c840544c9013ab28, type: 3}
+  m_Script: {fileID: 11500000, guid: 267994fa076de324a9a8eda70f28ec4f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   noteKey: 0
-  inputTime: 0
+  isNotMove: 0
   keyText: {fileID: 575751512070129313}

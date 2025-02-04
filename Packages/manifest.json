@@ -1,6 +1,8 @@
 {
   "dependencies": {
     "com.annulusgames.alchemy": "https://github.com/AnnulusGames/Alchemy.git?path=/Alchemy/Assets/Alchemy",
+    "com.coffee.softmask-for-ugui": "https://github.com/mob-sakai/SoftMaskForUGUI.git?path=Packages/src",
+    "com.unity.cinemachine": "3.1.3",
     "com.unity.collab-proxy": "2.6.0",
     "com.unity.feature.2d": "2.0.1",
     "com.unity.ide.rider": "3.0.31",

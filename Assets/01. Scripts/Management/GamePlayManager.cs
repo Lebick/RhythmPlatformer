@@ -8,6 +8,9 @@ public class GamePlayManager : Singleton<GamePlayManager>
 
     public float progress;
 
+    [Range(0.5f, 10)] public float noteSpeedMultiplier;
+    
+
     public bool isTest;
     private bool isPlay;
 

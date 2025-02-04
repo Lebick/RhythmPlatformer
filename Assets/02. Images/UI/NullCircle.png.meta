@@ -1,0 +1,741 @@
+fileFormatVersion: 2
+guid: 5c391d647758c2649a273fff613a04c6
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -6765315241591237222
+    second: NullCircle_0
+  - first:
+      213: 1694350863394852468
+    second: NullCircle_1
+  - first:
+      213: 3236704864621741721
+    second: NullCircle_2
+  - first:
+      213: -1746544807765077704
+    second: NullCircle_3
+  - first:
+      213: -808604841809204325
+    second: NullCircle_4
+  - first:
+      213: 8399438797369051593
+    second: NullCircle_5
+  - first:
+      213: -2826255504347764481
+    second: NullCircle_6
+  - first:
+      213: -8190587207766357101
+    second: NullCircle_7
+  - first:
+      213: 4849501568420935613
+    second: NullCircle_8
+  - first:
+      213: 312404017236408761
+    second: NullCircle_9
+  - first:
+      213: -5261019811815803301
+    second: NullCircle_10
+  - first:
+      213: -3200732399365889429
+    second: NullCircle_11
+  - first:
+      213: -6471711337776625564
+    second: NullCircle_12
+  - first:
+      213: 182567207582948819
+    second: NullCircle_13
+  - first:
+      213: -4097358784404652426
+    second: NullCircle_14
+  - first:
+      213: 2733694161765220936
+    second: NullCircle_15
+  - first:
+      213: 5394451175740243370
+    second: NullCircle_16
+  - first:
+      213: -790351391323941948
+    second: NullCircle_17
+  - first:
+      213: -5904025954541022983
+    second: NullCircle_18
+  - first:
+      213: -6933345206667522660
+    second: NullCircle_19
+  - first:
+      213: -8121323705596468963
+    second: NullCircle_20
+  - first:
+      213: -8370705214615467032
+    second: NullCircle_21
+  - first:
+      213: 999910096667373507
+    second: NullCircle_22
+  - first:
+      213: -8917398568260893970
+    second: NullCircle_23
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 256
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: NullCircle_0
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 235
+        width: 26
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a951b67c1a5cc12a0800000000000000
+      internalID: -6765315241591237222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NullCircle_1
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 247
+        width: 27
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 47ec689122b838710800000000000000
+      internalID: 1694350863394852468
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NullCircle_2
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 247
+        width: 27
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 996ce82fce51bec20800000000000000
+      internalID: 3236704864621741721
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NullCircle_3
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 235
+        width: 26
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8311cdc30c603c7e0800000000000000
+      internalID: -1746544807765077704
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NullCircle_4
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 217
+        width: 24
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b9b2d483e2247c4f0800000000000000
+      internalID: -808604841809204325
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NullCircle_5
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 217
+        width: 24
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9c901d5851dc09470800000000000000
+      internalID: 8399438797369051593
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NullCircle_6
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 192
+        width: 21
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ff8ebdac79f17c8d0800000000000000
+      internalID: -2826255504347764481
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NullCircle_7
+      rect:
+        serializedVersion: 2
+        x: 217
+        y: 192
+        width: 21
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 39b4a338450355e80800000000000000
+      internalID: -8190587207766357101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NullCircle_8
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 163
+        width: 17
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: db7fd639bf3ec4340800000000000000
+      internalID: 4849501568420935613
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NullCircle_9
+      rect:
+        serializedVersion: 2
+        x: 235
+        y: 163
+        width: 17
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9b9f7c96cc1e55400800000000000000
+      internalID: 312404017236408761
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NullCircle_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 131
+        width: 9
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b563d60fa5a1df6b0800000000000000
+      internalID: -5261019811815803301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NullCircle_11
+      rect:
+        serializedVersion: 2
+        x: 247
+        y: 131
+        width: 9
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b6266ba47d6b493d0800000000000000
+      internalID: -3200732399365889429
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NullCircle_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 98
+        width: 9
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 468c4fea3dcdf26a0800000000000000
+      internalID: -6471711337776625564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NullCircle_13
+      rect:
+        serializedVersion: 2
+        x: 247
+        y: 98
+        width: 9
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3dddd9378eb988200800000000000000
+      internalID: 182567207582948819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NullCircle_14
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 67
+        width: 17
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 67efb32f4e14327c0800000000000000
+      internalID: -4097358784404652426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NullCircle_15
+      rect:
+        serializedVersion: 2
+        x: 235
+        y: 67
+        width: 17
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 842439c3b5800f520800000000000000
+      internalID: 2733694161765220936
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NullCircle_16
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 40
+        width: 21
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aad7f2863c0fcda40800000000000000
+      internalID: 5394451175740243370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NullCircle_17
+      rect:
+        serializedVersion: 2
+        x: 217
+        y: 40
+        width: 21
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4c39668d89b1805f0800000000000000
+      internalID: -790351391323941948
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NullCircle_18
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 18
+        width: 24
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9f055eadcafa01ea0800000000000000
+      internalID: -5904025954541022983
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NullCircle_19
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 4
+        width: 26
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c9dcc6bd44fc7cf90800000000000000
+      internalID: -6933345206667522660
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NullCircle_20
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 4
+        width: 26
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d11a6fd4e134b4f80800000000000000
+      internalID: -8121323705596468963
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NullCircle_21
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 18
+        width: 24
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8ebc55b05f745db80800000000000000
+      internalID: -8370705214615467032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NullCircle_22
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 0
+        width: 27
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3cf6f276fe460ed00800000000000000
+      internalID: 999910096667373507
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NullCircle_23
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 0
+        width: 27
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ee28b32af390f3480800000000000000
+      internalID: -8917398568260893970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      NullCircle_0: -6765315241591237222
+      NullCircle_1: 1694350863394852468
+      NullCircle_10: -5261019811815803301
+      NullCircle_11: -3200732399365889429
+      NullCircle_12: -6471711337776625564
+      NullCircle_13: 182567207582948819
+      NullCircle_14: -4097358784404652426
+      NullCircle_15: 2733694161765220936
+      NullCircle_16: 5394451175740243370
+      NullCircle_17: -790351391323941948
+      NullCircle_18: -5904025954541022983
+      NullCircle_19: -6933345206667522660
+      NullCircle_2: 3236704864621741721
+      NullCircle_20: -8121323705596468963
+      NullCircle_21: -8370705214615467032
+      NullCircle_22: 999910096667373507
+      NullCircle_23: -8917398568260893970
+      NullCircle_3: -1746544807765077704
+      NullCircle_4: -808604841809204325
+      NullCircle_5: 8399438797369051593
+      NullCircle_6: -2826255504347764481
+      NullCircle_7: -8190587207766357101
+      NullCircle_8: 4849501568420935613
+      NullCircle_9: 312404017236408761
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
