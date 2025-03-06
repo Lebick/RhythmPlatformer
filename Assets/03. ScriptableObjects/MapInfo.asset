@@ -25,14 +25,14 @@ MonoBehaviour:
       endTime: 300
       isNotMove: 1
   - notes:
-    - requireKey: 6
+    - requireKey: 4
       startTime: 350
-      endTime: 450
+      endTime: 300
       isNotMove: 0
   - notes:
     - requireKey: 4
       startTime: 300
-      endTime: 400
+      endTime: 250
       isNotMove: 0
   - notes: []
   - notes: []

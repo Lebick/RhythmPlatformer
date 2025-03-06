@@ -1,79 +1,10 @@
 fileFormatVersion: 2
-guid: 5c391d647758c2649a273fff613a04c6
+guid: b1bd6ea7c9696464ba62ca7901217e09
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6765315241591237222
-    second: NullCircle_0
-  - first:
-      213: 1694350863394852468
-    second: NullCircle_1
-  - first:
-      213: 3236704864621741721
-    second: NullCircle_2
-  - first:
-      213: -1746544807765077704
-    second: NullCircle_3
-  - first:
-      213: -808604841809204325
-    second: NullCircle_4
-  - first:
-      213: 8399438797369051593
-    second: NullCircle_5
-  - first:
-      213: -2826255504347764481
-    second: NullCircle_6
-  - first:
-      213: -8190587207766357101
-    second: NullCircle_7
-  - first:
-      213: 4849501568420935613
-    second: NullCircle_8
-  - first:
-      213: 312404017236408761
-    second: NullCircle_9
-  - first:
-      213: -5261019811815803301
-    second: NullCircle_10
-  - first:
-      213: -3200732399365889429
-    second: NullCircle_11
-  - first:
-      213: -6471711337776625564
-    second: NullCircle_12
-  - first:
-      213: 182567207582948819
-    second: NullCircle_13
-  - first:
-      213: -4097358784404652426
-    second: NullCircle_14
-  - first:
-      213: 2733694161765220936
-    second: NullCircle_15
-  - first:
-      213: 5394451175740243370
-    second: NullCircle_16
-  - first:
-      213: -790351391323941948
-    second: NullCircle_17
-  - first:
-      213: -5904025954541022983
-    second: NullCircle_18
-  - first:
-      213: -6933345206667522660
-    second: NullCircle_19
-  - first:
-      213: -8121323705596468963
-    second: NullCircle_20
-  - first:
-      213: -8370705214615467032
-    second: NullCircle_21
-  - first:
-      213: 999910096667373507
-    second: NullCircle_22
-  - first:
-      213: -8917398568260893970
-    second: NullCircle_23
+      213: 5199979006384268662
+    second: Star_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -121,7 +52,7 @@ TextureImporter:
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 256
-  spriteBorder: {x: 128, y: 128, z: 128, w: 128}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
   alphaIsTransparency: 1
@@ -169,7 +100,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: NullCircle_0
+      name: Star_0
       rect:
         serializedVersion: 2
         x: 0
@@ -177,15 +108,15 @@ TextureImporter:
         width: 256
         height: 256
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 120, y: 120, z: 120, w: 120}
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a951b67c1a5cc12a0800000000000000
-      internalID: -6765315241591237222
+      spriteID: 675e50b0b590a2840800000000000000
+      internalID: 5199979006384268662
       vertices: []
       indices: 
       edges: []
@@ -195,7 +126,7 @@ TextureImporter:
     physicsShape: []
     bones: []
     spriteID: 5e97eb03825dee720800000000000000
-    internalID: 1537655665
+    internalID: 0
     vertices: []
     indices: 
     edges: []
@@ -204,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      NullCircle_0: -6765315241591237222
+      Star_0: 5199979006384268662
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

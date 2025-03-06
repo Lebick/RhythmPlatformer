@@ -12,13 +12,22 @@ public class NoteInfo : MonoBehaviour
 
     public TMP_Text keyText;
 
-    public void Setting(MapNote note)
+    private Transform poolingParent;
+
+    public void Setting(MapNote note, Transform poolingParent)
     {
         GetComponent<Image>().color = Color.white;
         inputTime = note.startTime;
         endInputTime = note.endTime;
         noteKey = InputManager.instance.EnumToKeyCode(note.requireKey);
+        this.poolingParent = poolingParent;
         UpdateText();
+    }
+
+    public void Destroy()
+    {
+        transform.SetParent(poolingParent);
+        gameObject.SetActive(false);
     }
 
     private void UpdateText()

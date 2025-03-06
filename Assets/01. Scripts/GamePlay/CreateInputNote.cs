@@ -50,15 +50,13 @@ public class CreateInputNote : MonoBehaviour
         {
             obj = poolingParent.GetChild(0).gameObject;
             obj.SetActive(true);
-            obj.GetComponent<NoteInfo>().Setting(note);
+            obj.GetComponent<NoteInfo>().Setting(note, poolingParent);
             obj.transform.SetParent(noteParent);
-
-            
         }
         else
         {
             obj = Instantiate(notePrefab, noteParent);
-            obj.GetComponent<NoteInfo>().Setting(note);
+            obj.GetComponent<NoteInfo>().Setting(note, poolingParent);
         }
 
         return obj;
