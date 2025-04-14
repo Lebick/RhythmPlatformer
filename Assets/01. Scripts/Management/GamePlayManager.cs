@@ -6,13 +6,16 @@ public class GamePlayManager : Singleton<GamePlayManager>
     public PlayerPosition player;
     public MapInfo mapInfo;
 
+    public GameHUD gameHUD;
+
     public float progress;
 
     [Range(0.5f, 10)] public float noteSpeedMultiplier;
     
-
-    public bool isTest;
     private bool isPlay;
+
+    public int combo;
+    public int life;
 
     protected override void Awake()
     {
@@ -39,9 +42,31 @@ public class GamePlayManager : Singleton<GamePlayManager>
 
     private void FixedUpdate()
     {
-        if (isTest && isPlay)
+        if (isPlay)
         {
             progress += Time.fixedDeltaTime * 100 * mapInfo.bpm / 60f;
+        }
+    }
+
+    public void AddCombo()
+    {
+        combo++;
+        gameHUD.SetCombo(combo);
+    }
+
+    public void ResetCombo()
+    {
+        combo = 0;
+        gameHUD.ResetCombo(combo);
+    }
+
+    public void DecreaseLife(int value)
+    {
+        life -= value;
+
+        if(life <= 0)
+        {
+            //Áê±Ý
         }
     }
 }
