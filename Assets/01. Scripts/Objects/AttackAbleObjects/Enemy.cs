@@ -55,6 +55,7 @@ public class Enemy : AttackAbleObject
 
         GameObject effect = PoolingManager.instance.GetPooling(getDamageEffect);
         effect.GetComponent<PoolingObject>().Initialize(getDamageEffect);
+        effect.transform.SetParent(transform);
 
         Vector3 dir = (GamePlayManager.instance.player.transform.position - transform.position).normalized;
 
