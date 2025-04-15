@@ -41,7 +41,6 @@ public class PoolingManager : Singleton<PoolingManager>
                 if (parent.GetChild(0).TryGetComponent(out PoolingObject obj))
                 {
                     obj.gameObject.SetActive(true);
-                    obj.Initialize();
                     return obj.gameObject;
                 }
             }

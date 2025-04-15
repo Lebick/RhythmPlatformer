@@ -32,6 +32,10 @@ public class PlayerPosition : MonoBehaviour
     public float dashForce = 0.5f; //대쉬 강도
     public float dashTimeMul = 1; //대쉬 타임 배속값
 
+    public bool isAttack; //공격중인지 확인하기 위함
+    public Transform attackRange; //공격 범위
+
+
     private List<MapNote> usedNotes = new(); //대쉬, 점프 등 1회에 한해 작동해야하는 노트들
     private Vector2 moveDir; //가고있는 방향
 
@@ -119,7 +123,6 @@ public class PlayerPosition : MonoBehaviour
             }
         }
 
-
         //좌우 움직임
         anim.SetBool("isMove", lastestPos.x != transform.position.x);
 
@@ -186,7 +189,7 @@ public class PlayerPosition : MonoBehaviour
         Vector2 dashVelocity = Vector2.zero;
         Vector2 lookDir = Vector2.zero;
 
-        //중력, 마찰 처리
+        //중력 처리
         if (IsGround(positions[^1]))
         {
             velocity.x = 0;
@@ -197,6 +200,7 @@ public class PlayerPosition : MonoBehaviour
             velocity.y -= gravity * oneCalculateInterval;
         }
 
+        #region 위치 처리
         Vector2 pos = positions[^1];
         Vector2 newPos = pos;
         Vector2 movePos = newPos;
@@ -222,6 +226,9 @@ public class PlayerPosition : MonoBehaviour
         movePos.x = CollisionCheck(Vector2.right, pos, movePos).x;
         movePos.y = CollisionCheck(Vector2.up, pos, movePos).y;
 
+        #endregion
+
+        #region 대쉬 처리
         //대쉬 방향, 속력 계산
         if (isDash)
         {
@@ -252,9 +259,33 @@ public class PlayerPosition : MonoBehaviour
             newPos.y = CollisionCheck(Vector2.up, pos, newPos).y;
         }
 
+        #endregion
+
         positions.Add(newPos);
         playerPathView.positionCount++;
         playerPathView.SetPosition(playerPathView.positionCount - 1, newPos);
+
+        #region 공격 처리
+
+        if (isAttack)
+        {
+            Vector3 center = positions[^1] + lookDir;
+            Vector3 size = attackRange.lossyScale;
+
+            Collider2D[] objs = Physics2D.OverlapBoxAll(center, size, 0, LayerMask.GetMask("AttackAble"));
+
+            foreach (Collider2D obj in objs)
+            {
+                if (obj.TryGetComponent(out AttackAbleObject attackObj))
+                {
+                    attackObj.Interaction(index);
+                }
+            }
+
+            isAttack = false;
+        }
+
+        #endregion
     }
 
     private Vector2 CollisionCheck(Vector2 checkDir, Vector2 currentPos, Vector2 nextPos)
@@ -320,6 +351,13 @@ public class PlayerPosition : MonoBehaviour
             velocity.y = jumpForce;
             usedNotes.Add(currentNote);
             playerAnimInfos.Add(new PlayerAnimInfo("Jump", index));
+        }
+
+        if (currentNote.requireKey == KeyList.attackKey && !usedNotes.Contains(currentNote))
+        {
+            isAttack = true;
+            usedNotes.Add(currentNote);
+            playerAnimInfos.Add(new PlayerAnimInfo("Attack", index));
         }
 
         if (!currentNote.isNotMove)

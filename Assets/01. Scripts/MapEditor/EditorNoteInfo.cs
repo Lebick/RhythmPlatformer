@@ -42,6 +42,8 @@ public class EditorNoteInfo : MonoBehaviour
             text = InputManager.instance.dashKey.ToString();
         else if (noteKey == InputManager.instance.jumpKey)
             text = InputManager.instance.jumpKey.ToString();
+        else if (noteKey == InputManager.instance.attackKey)
+            text = InputManager.instance.attackKey.ToString();
 
         keyText.text = text;
     }

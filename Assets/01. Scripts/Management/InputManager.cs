@@ -9,6 +9,7 @@ public enum KeyList
     rightKey,
     jumpKey,
     dashKey,
+    attackKey,
     none
 }
 
@@ -20,6 +21,7 @@ public class InputManager : Singleton<InputManager>
     public KeyCode rightKey     = KeyCode.RightArrow;
     public KeyCode jumpKey      = KeyCode.Z;
     public KeyCode dashKey      = KeyCode.X;
+    public KeyCode attackKey    = KeyCode.C;
 
     public List<KeyCode> keys;
 
@@ -36,6 +38,7 @@ public class InputManager : Singleton<InputManager>
         if (key == rightKey)    return KeyList.rightKey;
         if (key == jumpKey)     return KeyList.jumpKey;
         if (key == dashKey)     return KeyList.dashKey;
+        if (key == attackKey)   return KeyList.attackKey;
 
         return KeyList.none;
     }
@@ -48,6 +51,7 @@ public class InputManager : Singleton<InputManager>
         if (key == KeyList.rightKey)    return rightKey;
         if (key == KeyList.jumpKey)     return jumpKey;
         if (key == KeyList.dashKey)     return dashKey;
+        if (key == KeyList.attackKey)   return attackKey;
 
         return KeyCode.None;
     }
@@ -61,6 +65,7 @@ public class InputManager : Singleton<InputManager>
             leftKey,
             rightKey,
             jumpKey,
+            attackKey,
             dashKey
         };
     }

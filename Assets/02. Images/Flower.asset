@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Flower
   m_EditorClassIdentifier: 
   m_Angles:
-  - m_Start: -180
-    m_End: 180
+  - m_Start: -10
+    m_End: 10
     m_Order: 3
     m_Sprites:
     - {fileID: 21300000, guid: f1b2c5f71375e384a9dfb1f529be791a, type: 3}
