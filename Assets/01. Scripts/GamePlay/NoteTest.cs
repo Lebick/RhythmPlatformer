@@ -15,6 +15,15 @@ public class NoteTest : MonoBehaviour
 
     private void Update()
     {
+        if (map == null)
+        {
+            if (GamePlayManager.instance.mapInfo != null)
+                map = GamePlayManager.instance.mapInfo;
+            else
+                return;
+        }
+           
+
         foreach (TrackNote track in map.trackNote)
         {
             foreach(MapNote note in track.notes)

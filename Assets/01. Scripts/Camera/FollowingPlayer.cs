@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class FollowingCamera : MonoBehaviour
+public class FollowingPlayer : MonoBehaviour
 {
     public Transform target;
 

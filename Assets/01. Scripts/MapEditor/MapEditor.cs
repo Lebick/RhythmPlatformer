@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
+using UnityEditor;
 
 using System.Windows.Forms;
 using TMPro;
@@ -23,6 +24,8 @@ public class MapEditor : MonoBehaviour
     private AudioClip lastestBGM;
 
     private List<GameObject> currentTimelines = new();
+
+    public GameObject enviormentParent;
 
     private void Update()
     {
@@ -109,6 +112,9 @@ public class MapEditor : MonoBehaviour
             string json = JsonUtility.ToJson(mapInfo, true); //맵 정보를 JSON으로 변경
 
             File.WriteAllText(filePath, json); //지정한 경로에 JSON파일 저장
+
+            string prefabPath = $"Assets/03. MapDatas/Enviorments/{Path.GetFileNameWithoutExtension(saveFileDialog.FileName)}.prefab";
+            PrefabUtility.SaveAsPrefabAsset(enviormentParent, prefabPath);
         }
     }
 
@@ -126,6 +132,13 @@ public class MapEditor : MonoBehaviour
                 string json = File.ReadAllText(filePath);
 
                 JsonUtility.FromJsonOverwrite(json, mapInfo);
+
+                string prefabPath = $"Assets/03. MapDatas/Enviorments/{Path.GetFileNameWithoutExtension(openFileDialog.FileName)}.prefab";
+                GameObject prefab = AssetDatabase.LoadAssetAtPath<GameObject>(prefabPath);
+                GameObject newEnviorment = Instantiate(prefab, Vector3.zero, Quaternion.identity);
+
+                enviormentParent.SetActive(false);
+                enviormentParent = newEnviorment;
 
                 LoadInfo();
             }

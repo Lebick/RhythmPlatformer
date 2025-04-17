@@ -58,10 +58,18 @@ public class PlayerPosition : MonoBehaviour
 
     private void Update()
     {
+        if (map == null && GamePlayManager.instance.mapInfo != null)
+            map = GamePlayManager.instance.mapInfo;
+
         if (Input.GetKeyDown(KeyCode.T))
         {
-            StartCoroutine(Renderering());
+            SetRenderering();
         }
+    }
+    
+    public void SetRenderering()
+    {
+        StartCoroutine(Renderering());
     }
 
     private void FixedUpdate()
@@ -158,6 +166,14 @@ public class PlayerPosition : MonoBehaviour
         playerPathView.positionCount = 0; //위치 표시 초기화
         velocity = Vector2.zero; //속력값 초기화
         positions.Add(startPosition); //초기값 추가
+
+        while(map == null)
+        {
+            if(GamePlayManager.instance.mapInfo != null)
+                map = GamePlayManager.instance.mapInfo;
+
+            yield return null;
+        }
 
         int timeLineLength = Mathf.FloorToInt(map.backgroundMusic.length * map.bpm / 60 / 2);
         int endValue = timeLineLength * 200; //반복 횟수
